@@ -1,0 +1,13 @@
+configuration {
+  modes: [ combi ];
+  combi-modes: [ window, drun, run ];
+}
+
+@theme "Arc-Dark"
+ 
+/* Insert theme modifications after this */
+
+entry {
+    placeholder: "Type here";
+    cursor: pointer;
+}
