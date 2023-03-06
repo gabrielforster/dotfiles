@@ -206,7 +206,7 @@ bar {
         position bottom 
 }
 
-bindsym $mod+shift+x exec i3lock -c $lockcolor 
+bindsym $mod+shift+x exec i3lock -c $lockcolor -i /home/rocha/Documents/mountain.png
 # TODO -> Get a bigger mountain image for display as lock screen
 #-i /home/rocha/Documents/mountain.png
 
