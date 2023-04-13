@@ -15,3 +15,6 @@ pavucontrol
 arandr
 tmux
 nvim
+tf-font-awesome 6.4.0-1
+ttf-inconsolata 1:3.000-3
+ttf-ubuntu-font-family 1:0.83-1
