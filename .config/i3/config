@@ -199,10 +199,10 @@ exec_always picom -f
 exec_always dunst -conf /home/rocha/.config/dunst/dunstrc
 
 # Change monitor settings
-exec_always xrandr --output eDP1 -s 1920x1080 --pos 1920x0 --output HDMI1 --primary -s 1920x1080 --pos 0x0
+exec_always xrandr --output eDP-1 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output DP-2 --off
 
 # Changes keyboard layout to us
 exec "setxkbmap -layout us"
 exec_always "setxkbmap -layout us"
 
-exec_always feh --bg-scale /home/rocha/Downloads/gray_arch.jpg
+exec_always feh --bg-scale /home/rocha/Downloads/linux-kernel.jpeg
