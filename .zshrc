@@ -112,6 +112,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias dt=dotfiles
 
 alias sim-app='cd ~/github/adapcon/simplificamais-app/'
+alias personal='cd ~/github/personal'
 
 alias ts='~/.config/scripts/tmux-sessionier.sh'
 alias fehbg='~/.config/scripts/fehbg'
