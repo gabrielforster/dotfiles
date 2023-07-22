@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/home/grocha/.asdf/installs/rust/1.71.0/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -8,8 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="rocha"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -103,9 +102,20 @@ source $ZSH/oh-my-zsh.sh
 
 PATH=$PATH:/usr/local/go/bin
 
-alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-alias sim-app='cd ~/dev/adapcon/simplificamais-app/'
-alias vim=nvim
-alias ts='~/.config/scripts/tmux-sessionier.sh'
+# Setup asdf
+. "$HOME/.asdf/asdf.sh"
 
-date | cowsay
+# Setup go lang with asdf
+. ~/.asdf/plugins/golang/set-env.zsh
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias dt=dotfiles
+
+alias sim-app='cd ~/github/adapcon/simplificamais-app/'
+
+alias ts='~/.config/scripts/tmux-sessionier.sh'
+alias fehbg='~/.config/scripts/fehbg'
+
+alias vim=nvim
+alias python=python3
+
