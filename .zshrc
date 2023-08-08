@@ -102,6 +102,10 @@ source $ZSH/oh-my-zsh.sh
 
 PATH=$PATH:/usr/local/go/bin
 
+
+# Properly set up the C++ compiler
+export CPLUS_INCLUDE_PATH=/usr/include/c++/11:/usr/include/x86_64-linux-gnu/c++/11
+
 # Setup asdf
 . "$HOME/.asdf/asdf.sh"
 
