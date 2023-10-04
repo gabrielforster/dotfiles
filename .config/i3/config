@@ -204,4 +204,4 @@ exec_always xrandr --output eDP-1 --mode 1920x1080 --pos 1920x0 --rotate normal 
 exec "setxkbmap -layout us"
 exec_always "setxkbmap -layout us"
 
-exec_always feh --bg-scale /home/rocha/Downloads/linux-kernel.jpeg
+exec_always feh --bg-scale /home/rocha/wallpapers/black.jpg
