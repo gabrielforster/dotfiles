@@ -1,5 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=/home/grocha/.asdf/installs/rust/1.71.0/bin:$HOME/bin:/usr/local/bin:$PATH
+PATH=$HOME/bin:/usr/local/bin:$PATH
+PATH=$PATH:/home/grocha/.asdf/installs/rust/1.71.0/bin
+PATH="$PATH:$(go env GOPATH)/bin"
+export PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -120,6 +123,7 @@ alias personal='cd ~/github/personal'
 
 alias ts='~/.config/scripts/tmux-sessionier.sh'
 alias fehbg='~/.config/scripts/fehbg'
+alias monitor="~/.config/scripts/monitor.sh"
 
 alias vim=nvim
 alias python=python3
