@@ -1,7 +1,10 @@
 # If you come from bash you might have to change your $PATH.
+PATH=$PATH
 PATH=$HOME/bin:/usr/local/bin:$PATH
 PATH=$PATH:/home/grocha/.asdf/installs/rust/1.71.0/bin
-PATH="$PATH:$(go env GOPATH)/bin"
+PATH=$PATH:/home/grocha/.asdf/installs/golang/1.20.6/packages/bin/
+PATH=$PATH:/home/grocha/.asdf/installs/python/3.12.1/bin
+
 export PATH
 
 # Path to your oh-my-zsh installation.
@@ -11,7 +14,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+#ZSH_THEME="miloshadzic"
+#ZSH_THEME="risto"
+ZSH_THEME="philips"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -103,8 +109,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-PATH=$PATH:/usr/local/go/bin
-
 
 # Properly set up the C++ compiler
 export CPLUS_INCLUDE_PATH=/usr/include/c++/11:/usr/include/x86_64-linux-gnu/c++/11
@@ -126,5 +130,3 @@ alias fehbg='~/.config/scripts/fehbg'
 alias monitor="~/.config/scripts/monitor.sh"
 
 alias vim=nvim
-alias python=python3
-
