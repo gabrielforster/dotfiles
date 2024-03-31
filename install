@@ -6,5 +6,6 @@ FOLDERS="config,git,tmux,zsh"
 for folder in $(echo $FOLDERS | sed "s/,/ /g")
 do
   echo "stowing $folder"
+  stow -D $folder
   stow $folder -t ~
 done
