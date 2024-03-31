@@ -1,7 +1,10 @@
 #!/usr/bin/env zsh
 
-echo "stowing"
-stow .config -t ~
-stow .gitconfig -t ~
-stow .tmux.conf -t ~
-stow .zshrc -t ~
+mkdir -p $HOME/.config
+
+FOLDERS=".config,.gitconfig,.tmux.conf,.zshrc"
+for folder in $(echo $FOLDERS | sed "s/,/ /g")
+do
+  echo "stowing $folder"
+  stow $folder -t $HOME/$folder
+done
