@@ -2,9 +2,9 @@
 
 mkdir -p $HOME/.config
 
-FOLDERS=".config,.gitconfig,.tmux.conf,.zshrc"
+FOLDERS="config,git,tmux,zsh"
 for folder in $(echo $FOLDERS | sed "s/,/ /g")
 do
   echo "stowing $folder"
-  stow $folder -t $HOME/$folder
+  stow $folder -t ~
 done
