@@ -15,7 +15,7 @@ set $text-color #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-color #E53935
 
-bindsym --release Print exec flameshot gui
+bindsym --release $mod+p exec flameshot gui
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -53,7 +53,7 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
-bindsym $mod+d exec rofi -show run -width 100 -padding 800 
+bindsym $mod+d exec rofi -show run -width 100 -padding 800
 
 # change focus
 bindsym $mod+Left focus left
@@ -160,20 +160,30 @@ bar {
      #  status_command i3blocks -c ~/.config/i3/i3blocks.conf
         status_command i3status -c ~/.config/i3/i3status.conf
      #  colors {
-     #          background $bg-color 
+     #          background $bg-color
      #          #                       border                  background              text
      #          focused_workspace       $bg-color               $bg-color               $text-color
      #          inactive_workspace      $inactive-bg-color      $inactive-bg-color      $inactive-text-color
      #          urgent_workspace        $urgent-color           $urgent-color           $text-color
      #  }
-        position bottom 
+        position bottom
 }
+
 
 bindsym $mod+shift+x exec i3lock -c $lockcolor -i /home/rocha/Documents/mountain.png
 
+
+
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+# This needs "echo 200 | sudo tee /sys/class/backlight/intel_backlight/brightness"
+# and groups "video" and "input" to be added to user
+# sudo usermod -aG video ${USER}
+# sudo usermod -aG input ${USER}
+
+# increase screen brightness
+bindsym XF86MonBrightnessUp exec brightnessctl specific +100
+# decrease screen brightness
+bindsym XF86MonBrightnessDown exec brightnessctl specific 100-
 
 # Touchpad controls
 bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
@@ -186,16 +196,15 @@ bindsym XF86AudioPrev exec playerctl previous
 
 #Definig where specif windows should be opened
 assign [class="Code"] $ws2
-assign [class="firefox"] $ws3
 assign [class="discord"] $ws5
 assign [class="Spotify"] $ws10
 
 #Auto start some apps on startup
-exec firefox 
+# exec firefox
 exec discord
 
 #Auto start some apps on every i3-session-restart
-exec_always picom --config ~/.config/picom.conf
+# exec_always picom --config ~/.config/picom.conf
 exec_always dunst -conf /home/rocha/.config/dunst/dunstrc
 
 # Change monitor settings
@@ -205,4 +214,5 @@ exec_always xrandr --output eDP-1 --mode 1920x1080 --pos 1920x0 --rotate normal 
 exec "setxkbmap -layout us"
 exec_always "setxkbmap -layout us"
 
-exec_always feh --bg-scale /home/grocha/wallpapers/solid-dark-brown.png
+exec_always feh --bg-scale /home/grocha/wallpapers/black.png
+exec_always xset r rate 200 42
