@@ -7,6 +7,8 @@ PATH=$PATH:$HOME/neovim/bin
 PATH=$PATH:$HOME/.asdf/installs/golang/1.22.0/packages/bin
 PATH=$PATH:$HOME/.local/lib/python3.10/site-packages
 PATH=$PATH:$HOME/.local/bin
+PATH=$PATH:$HOME/.pub-cache/bin
+PATH=$PATH:$HOME/Android/Sdk/platform-tools/
 
 export PATH
 
@@ -88,16 +90,24 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' alias
 alias ts='~/.config/scripts/tmux-sessionier.sh' alias fehbg='~/.config/scripts/fehbg'
 alias monitor="~/.config/scripts/monitor.sh"
 
-alias python=python3
+alias python="python3.10"
 alias pip=pip3
 alias vim=nvim
 
 alias stage="cp $HOME/adapcon/keys/simplificamais-stage.txt $HOME/.aws/credentials"
 alias prod="cp $HOME/adapcon/keys/simplificamais-prod.txt $HOME/.aws/credentials"
+
+alias stage-amc="cp $HOME/adapcon/keys/amc-stage.txt $HOME/.aws/credentials"
+alias prod-amc="cp $HOME/adapcon/keys/amc-prod.txt $HOME/.aws/credentials"
+
 alias padmin="cp $HOME/personal/keys/admin.txt $HOME/.aws/credentials"
 
 alias pycharm="sh /opt/pycharm-community-2023.3.4/bin/pycharm.sh"
+alias ptbr="setxkbmap br"
+alias enus="setxkbmap us"
 
 bindkey -s ^t 'ts\n'
+
+export FLUTTER_ROOT="$(asdf where flutter)"
 
 xset r rate 200 42
