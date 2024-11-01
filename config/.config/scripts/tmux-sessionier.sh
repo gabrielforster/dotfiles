@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/.config ~/github ~/github/adapcon ~/github/adapcon/simplificamais-app/microservices ~/github/adapcon/simplificamais-app/app/src/modules ~/github/personal ~/github/personal/chattin ~/github/personal/chattin/microservices/ ~/github/catolica ~/ -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/.config ~/github ~/github/adapcon ~/github/adapcon/amc-simplificamais/microservices ~/github/adapcon/amc-simplificamais/app/src/modules ~/github/personal ~/github/catolica ~/ -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then

@@ -1,5 +1,14 @@
 [user]
-	name = Gabriel Rocha
-	email = rochafrgabriel@gmail.com
+  name = Gabriel Rocha
+  email = rochafrgabriel@gmail.com
+
 [core]
-	editor = nvim
+  editor = nvim
+  ;editor = vim
+  pager = delta
+
+[delta]
+  line-number = true
+
+[interactive]
+  diffFilter = delta --color-only

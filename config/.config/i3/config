@@ -208,7 +208,7 @@ exec discord
 exec_always dunst -conf /home/rocha/.config/dunst/dunstrc
 
 # Change monitor settings
-exec_always xrandr --output eDP-1 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output DP-2 --off
+exec_always /home/grocha/.screenlayout/home.sh
 
 # Changes keyboard layout to us
 exec "setxkbmap -layout us"
