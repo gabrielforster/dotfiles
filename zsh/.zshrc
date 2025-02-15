@@ -1,14 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 PATH=$PATH
 PATH=$HOME/bin:/usr/local/bin:$PATH
-PATH=$PATH:$HOME/.asdf/installs/rust/1.71.0/bin
-PATH=$PATH:$HOME/.asdf/installs/python/3.12.1/bin
+# PATH=$HOME/bin:/usr/local/go/bin:$PATH
+PATH=$HOME/bin:/usr/local/go/bin:$PATH
 PATH=$PATH:$HOME/neovim/bin
-PATH=$PATH:$HOME/.asdf/installs/golang/1.22.0/packages/bin
 PATH=$PATH:$HOME/.local/lib/python3.10/site-packages
 PATH=$PATH:$HOME/.local/bin
 PATH=$PATH:$HOME/.pub-cache/bin
 PATH=$PATH:$HOME/Android/Sdk/platform-tools/
+PATH="$PATH:$(go env GOPATH)/bin"
 
 export PATH
 
@@ -79,12 +79,6 @@ source $ZSH/oh-my-zsh.sh
 # Properly set up the C++ compiler
 export CPLUS_INCLUDE_PATH=/usr/include/c++/11:/usr/include/x86_64-linux-gnu/c++/11
 
-# Setup asdf
-. "$HOME/.asdf/asdf.sh"
-
-# Setup go lang with asdf
-. ~/.asdf/plugins/golang/set-env.zsh
-
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' alias dt=dotfiles
 
 alias ts='~/.config/scripts/tmux-sessionier.sh' alias fehbg='~/.config/scripts/fehbg'
@@ -108,6 +102,6 @@ alias enus="setxkbmap us"
 
 bindkey -s ^t 'ts\n'
 
-export FLUTTER_ROOT="$(asdf where flutter)"
+# export FLUTTER_ROOT="$(asdf where flutter)"
 
 xset r rate 200 42
