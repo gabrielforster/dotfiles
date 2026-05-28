@@ -1,0 +1,27 @@
+[user]
+  name = Gabriel Rocha
+  email = rochafrgabriel@gmail.com
+	signingkey = D21F6A376CF3C104DAA712F107913A1DDBEF2984
+
+[core]
+  editor = nvim
+  ;editor = vim
+  pager = delta
+
+[delta]
+  line-number = true
+
+[interactive]
+  diffFilter = delta --color-only
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = master
+
+[rerere]
+  enabled = true
+
+[push]
+  autoSetupRemote = true
+[branch]
+  autoSetupMerge = always
