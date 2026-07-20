@@ -54,6 +54,11 @@ cd ~
 dotfiles submodule update --init --recursive
 ```
 
+4. Checkout to master branch on submodules 
+```bash
+dotfiles submodule foreach 'git checkout master'
+```
+
 ## Usage
 
 Once setup, useful commands include:
