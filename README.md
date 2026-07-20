@@ -50,15 +50,8 @@ dotfiles checkout
 
 3. Install the submodules
 ```bash
-cd ~/.config/nvim && dotfiles submodule update
-```
-
-```bash
-cd ~/.config/zsh && dotfiles submodule update
-```
-
-```bash
-cd ~/.config/i3 && dotfiles submodule update
+cd ~
+dotfiles submodule update --init --recursive
 ```
 
 ## Usage
