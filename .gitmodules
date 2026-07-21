@@ -1,9 +1,12 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = git@github.com:gabrielforster/nvim.git
+	branch = master
 [submodule ".config/zsh"]
 	path = .config/zsh
 	url = git@github.com:gabrielforster/zsh.git
+	branch = master
 [submodule ".config/i3"]
 	path = .config/i3
 	url = git@github.com:gabrielforster/i3.git
+	branch = master
