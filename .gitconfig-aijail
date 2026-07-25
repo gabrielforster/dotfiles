@@ -1,11 +1,16 @@
 [user]
-  name = Gabriel Rocha
-  email = rochafrgabriel@gmail.com
-	signingkey = D21F6A376CF3C104DAA712F107913A1DDBEF2984
+  name = Gabriel Rocha (ai-jail)
+  email = rochafrgabriel+aijail@gmail.com
+
+[gpg]
+	format = ssh
+[user]
+	signingkey = /home/gabrielrocha/.ssh/id_ed25519
+[commit]
+	gpgsign = true
 
 [core]
   editor = nvim
-  ;editor = vim
   pager = delta
 
 [delta]
@@ -25,5 +30,3 @@
   autoSetupRemote = true
 [branch]
   autoSetupMerge = always
-[gpg "ssh"]
-	allowedSignersFile = /home/gabrielrocha/.config/git/allowed_signers
