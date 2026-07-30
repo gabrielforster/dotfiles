@@ -1,0 +1,20 @@
+font-family = IoskeleyMonoTerm Nerd Font
+font-size = 15
+
+window-padding-x = 4
+window-padding-y = 4
+window-padding-balance = true
+background-opacity = 1.0
+
+# Alacritty's default theme (Tomorrow Night). Ghostty's palette 0-15 already
+# matches it byte-for-byte; only bg/fg differ from Ghostty's defaults.
+background = #1d1f21
+foreground = #c5c8c6
+
+mouse-hide-while-typing = true
+
+# No GTK headerbar/titlebar — bare terminal surface
+window-decoration = none
+
+# shift+enter -> ESC CR
+keybind = shift+enter=text:\x1b\r
