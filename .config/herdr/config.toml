@@ -13,6 +13,15 @@ navigate_workspace_down = "j"
 navigate_pane_up        = "up"
 navigate_pane_down      = "down"
 
+split_horizontal = "prefix+\""
+split_vertical = "prefix+%"
+
+cycle_pane_previous = ""
+next_agent = "prefix+tab"
+previous_agent = "prefix+shift+tab"
+
+open_notification_target = "prefix+o"
+
 # prefix+[ into copy mode, as in tmux
 copy_mode = "prefix+["
 
