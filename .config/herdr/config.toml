@@ -20,6 +20,7 @@ cycle_pane_previous = ""
 next_agent = "prefix+tab"
 previous_agent = "prefix+shift+tab"
 
+# jumps to the toast target; only fires while a toast is on screen
 open_notification_target = "prefix+o"
 
 # prefix+[ into copy mode, as in tmux
@@ -37,5 +38,17 @@ show_agent_labels_on_pane_borders = true
 [theme]
 name = "catppuccin"
 
+auto_switch = false
 [ui.toast]
-delivery = "system"
+delivery = "herdr"
+delay_seconds = 1
+
+[ui.toast.herdr]
+position = "bottom-right"
+
+# Jump to next agent waiting on input, toast on screen or not.
+[[keys.command]]
+key = "prefix+shift+o"
+type = "shell"
+command = "/home/gabrielrocha/.config/scripts/herdr-focus-blocked.sh"
+description = "focus next blocked agent"
