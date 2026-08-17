@@ -6,10 +6,9 @@ window-padding-y = 4
 window-padding-balance = true
 background-opacity = 1.0
 
-# Alacritty's default theme (Tomorrow Night). Ghostty's palette 0-15 already
-# matches it byte-for-byte; only bg/fg differ from Ghostty's defaults.
-background = #1d1f21
-foreground = #c5c8c6
+# Matches herdr's vesper theme. Previous colors backed up as
+# themes/tomorrow-night — restore with: theme = tomorrow-night
+theme = Vesper
 
 mouse-hide-while-typing = true
 
